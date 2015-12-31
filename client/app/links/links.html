@@ -11,8 +11,18 @@
 <div id='container'>
   <!-- Your html here -->
   <h1>links</h1>
-  <ul>
-      <li class="link" ng-repeat="link in data.links">
+
+    <form>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                <input type="text" class="form-control" placeholder="Search links" ng-model="searchLinks">
+            </div>
+        </div>
+    </form>
+
+    <ul>
+      <li class="link" ng-repeat="link in data.links | filter:{title: searchLinks} | orderBy: '-visits' ">
       	<img src='../assets/redirect_icon.png'/>
       	<div class='info'>
       	  <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>

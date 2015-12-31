@@ -10,7 +10,7 @@
 </div>
 <div id='container'>
 <!-- Your code here -->
-	<form ng-submit="submitForm($valid, url)" name="addLinkForm" novalidate>
+	<form ng-submit="submitForm(!$invalid, url)" name="addLinkForm" novalidate>
     <div class="form-group" ng-class="{ 'has-error' : addLinkForm.url.$invalid && !addLinkForm.url.$pristine, 'has-success' : !addLinkForm.url.$invalid && !addLinkForm.url.$pristine }">
 			<label>Enter a url*</label>
 			<input type="url" name="url" class="form-control" ng-model="url" required pattern="https?://.+">

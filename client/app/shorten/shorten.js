@@ -13,6 +13,7 @@ angular.module('shortly.shorten', [])
 
   $scope.submitForm = function(isValid, url) {
 		// check to make sure the form is completely valid
+		console.log('valid = ', isValid, ' \nurl = ', url);
 		if (isValid) {
 			$scope.addLink(url);
 		}
