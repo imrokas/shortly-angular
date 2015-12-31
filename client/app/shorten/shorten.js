@@ -10,4 +10,11 @@ angular.module('shortly.shorten', [])
 			});
 
   };
+
+  $scope.submitForm = function(isValid, url) {
+		// check to make sure the form is completely valid
+		if (isValid) {
+			$scope.addLink(url);
+		}
+	};
 });

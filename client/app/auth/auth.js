@@ -13,6 +13,7 @@ angular.module('shortly.auth', [])
         $location.path('/links');
       })
       .catch(function (error) {
+        $scope.errorMessage = error.data.error;
         console.error(error);
       });
   };
@@ -24,6 +25,7 @@ angular.module('shortly.auth', [])
         $location.path('/links');
       })
       .catch(function (error) {
+        $scope.errorMessage = error.data.error;
         console.error(error);
       });
   };
