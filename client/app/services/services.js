@@ -72,4 +72,15 @@ angular.module('shortly.services', [])
     isAuth: isAuth,
     signout: signout
   };
-});
+})
+    .directive('shortenLink', function () {
+        return {restrict: 'EA',
+                templateUrl: 'app/shortenLink.html',
+                replace: true,
+                scope: {
+                  link: '='
+                }};
+    })
+
+;
+

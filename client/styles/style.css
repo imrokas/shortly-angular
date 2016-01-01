@@ -58,6 +58,7 @@ h1 {
   margin-bottom: 5px;
   padding: 5px;
   min-height: 50px;
+  border: 1px solid #eee;
 }
 
 .link:hover {
@@ -67,6 +68,7 @@ h1 {
 .link img {
   float: left;
   margin: 0 5px;
+  padding-top: 5px;
 }
 
 .link .visits {

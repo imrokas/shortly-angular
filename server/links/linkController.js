@@ -39,6 +39,7 @@ module.exports = {
       return next(new Error('Not a valid url'));
     }
 
+    //conver to promises
     var createLink = Q.nbind(Link.create, Link);
     var findLink = Q.nbind(Link.findOne, Link);
 
